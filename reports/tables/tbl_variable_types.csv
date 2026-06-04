@@ -1,0 +1,16 @@
+variable,kind,dtype,missing
+age,numeric,int64,0
+gender,categorical,object,0
+bmi,numeric,float64,90
+bnp,numeric,int64,0
+sodium,numeric,float64,90
+creatinine,numeric,float64,90
+systolic_bp,numeric,int64,0
+heart_rate,numeric,int64,0
+ace_inhibitor,categorical,int64,0
+beta_blocker,categorical,int64,0
+diuretic,categorical,int64,0
+adherence_score,numeric,float64,0
+income_level,categorical,object,0
+distance_to_hospital_km,numeric,float64,0
+readmitted_30d,target,int64,0
