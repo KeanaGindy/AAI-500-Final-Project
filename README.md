@@ -50,13 +50,13 @@ out-of-range readings into NaN and the modeling pipeline imputes them.
 ├── data/
 │   ├── raw/                  # raw CSV goes here (untracked)
 │   ├── interim/
-│   └── processed/            # cleaned.csv written by notebook 02
+│   └── processed/            # cleaned.csv written by notebook 01
 ├── notebooks/
-│   ├── 01_eda.ipynb
-│   ├── 02_cleaning.ipynb
+│   ├── 01_cleaning.ipynb
+│   ├── 02_eda_cleaned.ipynb
 │   ├── 03_statistical_testing.ipynb
 │   ├── 04_modeling.ipynb
-│   └── 05_eda_detailed.ipynb
+│   └── 05_eda_detailed_cleaned.ipynb
 ├── src/
 │   ├── config.py             # paths, constants, seed
 │   ├── data/                 # load, clean
@@ -94,11 +94,11 @@ Run the notebooks in order:
 
 | # | Notebook | What it does |
 |---|---|---|
-| 01 | `01_eda.ipynb` | distributions, missingness, correlations, target comparisons (box + violin), outliers, encoding preview |
-| 02 | `02_cleaning.ipynb` | flag impossible values, save `data/processed/cleaned.csv` |
-| 03 | `03_statistical_testing.ipynb` | chi-square, t-tests / Mann-Whitney, odds ratios, permutation test |
-| 04 | `04_modeling.ipynb` | placeholder — model training/comparison not implemented yet (TODO) |
-| 05 | `05_eda_detailed.ipynb` | distribution fits, empirical rule, CLT, bootstrap, Bayesian estimate |
+| 01 | `01_cleaning.ipynb` | preserve the raw data, remove `patient_id`, validate categories/binary fields, flag clinically impossible values, summarize missingness, and save `data/processed/cleaned.csv` |
+| 02 | `02_eda_cleaned.ipynb` | run EDA on the cleaned dataset: distributions, missingness, correlations, target comparisons, outlier review, and encoding preview |
+| 03 | `03_statistical_testing.ipynb` | run chi-square tests, t-tests / Mann-Whitney tests, effect sizes, odds ratios, multiple-testing correction, and permutation testing |
+| 04 | `04_modeling.ipynb` | train and evaluate the majority-class baseline and Logistic Regression pipeline, including metrics, cross-validation, curves, threshold review, and coefficient interpretation |
+| 05 | `05_eda_detailed_cleaned.ipynb` | supplemental cleaned-data EDA: distribution fits, empirical rule, CLT, bootstrap analysis, and Bayesian estimate |
 
 Figures and tables are written to `reports/figures/` and `reports/tables/`.
 
@@ -110,11 +110,11 @@ pytest
 
 ## Notes
 
-- Modeling (`04`) is a placeholder — `src/features/build.py` and `src/models/`
-  are stubs for the team to fill in.
+- Run `01_cleaning.ipynb` first. All later notebooks use `data/processed/cleaned.csv` so EDA, statistical testing, and modeling are based on the same validated dataset.
+- Modeling (`04`) now includes a majority-class baseline and Logistic Regression workflow. Additional model notebooks/sections can reuse the same cleaned dataset, split, and evaluation metrics for fair comparison.
+- The Logistic Regression threshold sweep is performed on a validation split from the training data. The held-out test set is used only for final reported metrics.
 - `RANDOM_STATE` in `src/config.py` is there for reproducibility.
-- This is coursework on observational data, so results are associations, not
-  causal effects, and are not meant for real clinical use.
+- This is coursework on observational data, so results are associations, not causal effects, and are not meant for real clinical use.
 
 ## References
 
