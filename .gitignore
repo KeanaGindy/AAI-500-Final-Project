@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE (track .idea/ for the team's PyCharm config, but ignore VSCode)
+.vscode/
+*.swp
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data — keep the directory structure, ignore the actual files
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Model artifacts
+models/*
+!models/.gitkeep
+
+# reports/ figures, tables and the write-up are committed as deliverables
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/

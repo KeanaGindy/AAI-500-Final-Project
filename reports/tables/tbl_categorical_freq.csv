@@ -1,0 +1,12 @@
+variable,level,count,pct
+gender,Male,1508,50.27
+gender,Female,1492,49.73
+income_level,Low,1024,34.13
+income_level,Medium,998,33.27
+income_level,High,978,32.6
+ace_inhibitor,1,1565,52.17
+ace_inhibitor,0,1435,47.83
+beta_blocker,1,1510,50.33
+beta_blocker,0,1490,49.67
+diuretic,0,1533,51.1
+diuretic,1,1467,48.9
