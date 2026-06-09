@@ -1,0 +1,8 @@
+topic,note
+Data source,Modeling used data/processed/cleaned.csv produced by the cleaning notebook.
+Preprocessing,Numeric features were median-imputed and scaled; categorical features were mode-imputed and one-hot encoded inside the pipeline.
+Baseline,A most-frequent dummy classifier was used as the baseline.
+Model,Logistic regression was used as the main interpretable classification model.
+Metrics,"Performance was evaluated with accuracy, precision, recall, F1, ROC-AUC, and average precision."
+Interpretation,Coefficients were converted to odds ratios for practical interpretation.
+Limitation,"The model estimates associations and risk patterns, but does not prove causation."

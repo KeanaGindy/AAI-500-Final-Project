@@ -1,0 +1,6 @@
+topic,finding
+class balance,1234/3000 (41.1%) readmitted within 30 days
+missing data,"Remaining missingness after cleaning: {'bmi': 3.07, 'sodium': 3.0, 'creatinine': 3.97, 'heart_rate': 0.07}"
+bnp distribution,"right-skewed, gamma shape ~2.26"
+sodium distribution,roughly normal after cleaning; used for the normal fit
+age empirical rule,~57.53% within 1 sd vs 68% for a normal
