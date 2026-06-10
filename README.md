@@ -56,6 +56,7 @@ out-of-range readings into NaN and the modeling pipeline imputes them.
 │   ├── 02_eda_cleaned.ipynb
 │   ├── 03_statistical_testing.ipynb
 │   ├── 04_modeling.ipynb
+│   ├── 04c_modeling_hgbc.ipynb
 │   └── 05_eda_detailed_cleaned.ipynb
 ├── src/
 │   ├── config.py             # paths, constants, seed
@@ -98,6 +99,7 @@ Run the notebooks in order:
 | 02 | `02_eda_cleaned.ipynb` | run EDA on the cleaned dataset: distributions, missingness, correlations, target comparisons, outlier review, and encoding preview |
 | 03 | `03_statistical_testing.ipynb` | run chi-square tests, t-tests / Mann-Whitney tests, effect sizes, odds ratios, multiple-testing correction, and permutation testing |
 | 04 | `04_modeling.ipynb` | train and evaluate the majority-class baseline and Logistic Regression pipeline, including metrics, cross-validation, curves, threshold review, and coefficient interpretation |
+| 04c | `04c_modeling_hgbc.ipynb` | train and evaluate HistGradientBoosting on the same split and preprocessing as 04, with small AUROC-scored tuning, threshold review, permutation importance, and partial dependence |
 | 05 | `05_eda_detailed_cleaned.ipynb` | supplemental cleaned-data EDA: distribution fits, empirical rule, CLT, bootstrap analysis, and Bayesian estimate |
 
 Figures and tables are written to `reports/figures/` and `reports/tables/`.

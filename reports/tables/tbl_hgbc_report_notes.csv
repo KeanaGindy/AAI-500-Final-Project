@@ -1,0 +1,10 @@
+topic,note
+Data source,Modeling used data/processed/cleaned.csv produced by the cleaning notebook.
+Shared setup,Same stratified 80/20 split (random_state=42) and preprocessing pipeline as notebook 04.
+Model,"HistGradientBoostingClassifier: boosted decision trees, the most flexible model lane."
+Tuning,"Small 4-candidate grid over learning_rate and max_leaf_nodes, 5-fold CV scored by AUROC."
+Metrics,"Accuracy, recall, specificity, precision, F1, AUROC, average precision, confusion matrix."
+Threshold review,Thresholds were compared on a validation split from training data; the test set was used only for final metrics.
+Interpretation,Permutation importance (AUROC drop) and partial dependence for the top two features.
+Complexity verdict,Compare HGBC test metrics against logistic regression to judge whether the extra complexity is justified.
+Limitation,"Associations on observational data, not causal effects; not for real clinical use."
