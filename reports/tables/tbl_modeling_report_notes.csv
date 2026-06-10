@@ -5,4 +5,5 @@ Baseline,A most-frequent dummy classifier was used as the baseline.
 Model,Logistic regression was used as the main interpretable classification model.
 Metrics,"Performance was evaluated with accuracy, precision, recall, F1, ROC-AUC, and average precision."
 Interpretation,Coefficients were converted to odds ratios for practical interpretation.
+Threshold review,Threshold review used a validation split from the training data to avoid tuning on the held-out test set.
 Limitation,"The model estimates associations and risk patterns, but does not prove causation."

@@ -1,6 +1,0 @@
-topic,finding
-class balance,1234/3000 (41.1%) readmitted within 30 days
-missing data,"bmi, sodium, creatinine ~3% missing; creatinine had impossible negatives"
-bnp distribution,"right-skewed, gamma shape ~2.26"
-sodium distribution,"roughly normal, used for the normal fit"
-age empirical rule,~57.53% within 1 sd vs 68% for a normal
