@@ -1,0 +1,2 @@
+model,baseline_accuracy,test_accuracy,specificity_at_0_40,precision_at_0_40,recall_at_0_40,f1_at_0_40,roc_auc,notes
+Logistic Regression,0.5883333333333334,0.6283333333333333,0.5949008498583569,0.546031746031746,0.6963562753036437,0.6120996441281139,0.6898189033271782,"Interpretable model; specificity, precision, recall, and F1 reported at selected 0.40 screening threshold."
