@@ -3,7 +3,8 @@ Data source,Modeling used data/processed/cleaned.csv produced by the cleaning no
 Preprocessing,Numeric features were median-imputed and scaled; categorical features were mode-imputed and one-hot encoded inside the pipeline.
 Baseline,A most-frequent dummy classifier was used as the baseline.
 Model,Logistic regression was used as the main interpretable classification model.
-Metrics,"Performance was evaluated with accuracy, precision, recall, F1, ROC-AUC, and average precision."
+Metrics,"Performance was evaluated with accuracy, specificity, precision, recall, F1, ROC-AUC, and average precision."
 Interpretation,Coefficients were converted to odds ratios for practical interpretation.
 Threshold review,Threshold review used a validation split from the training data to avoid tuning on the held-out test set.
+Specificity,Specificity is calculated as TN / (TN + FP) and is included in the model results and final report comparison row.
 Limitation,"The model estimates associations and risk patterns, but does not prove causation."
